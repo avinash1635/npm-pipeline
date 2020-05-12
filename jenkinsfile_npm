@@ -1,0 +1,12 @@
+node ('slave')
+{
+    stage ('Preparation')
+    {
+        'https://github.com/avinash1635/npm_pipeline.git'
+    }
+    stage ('Build')
+    {
+        sh "npm install"
+        sh "npm build"
+    }
+}
